@@ -1,0 +1,101 @@
+
+[05-Nov-2015 17:26:12 UTC] PHP Notice:  Undefined variable: addressm in /home/anu888/public_html/lat_lon.php on line 13
+[05-Nov-2015 17:26:12 UTC] PHP Notice:  Undefined variable: addressm in /home/anu888/public_html/lat_lon.php on line 13
+[05-Nov-2015 17:26:12 UTC] PHP Notice:  Undefined variable: addressm in /home/anu888/public_html/lat_lon.php on line 13
+[05-Nov-2015 17:26:13 UTC] PHP Notice:  Undefined variable: addressm in /home/anu888/public_html/lat_lon.php on line 13
+[05-Nov-2015 17:26:13 UTC] PHP Notice:  Undefined variable: addressm in /home/anu888/public_html/lat_lon.php on line 13
+[08-Nov-2015 22:46:40 America/Los_Angeles] PHP Notice:  Undefined index: doctor_gender in /home/anu888/public_html/includes/docheader.php on line 45
+[08-Nov-2015 22:46:40 America/Los_Angeles] PHP Notice:  Undefined index: doctor_gender in /home/anu888/public_html/includes/docheader.php on line 47
+[08-Nov-2015 22:46:40 America/Los_Angeles] PHP Notice:  Undefined index: doctor_gender in /home/anu888/public_html/includes/docleftsidebar.php on line 22
+[08-Nov-2015 22:46:40 America/Los_Angeles] PHP Notice:  Undefined index: doctor_gender in /home/anu888/public_html/includes/docleftsidebar.php on line 24
+[15-Nov-2015 08:49:46 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 08:49:46 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 08:49:46 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 08:49:46 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 08:49:52 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 08:49:52 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 08:49:52 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 08:49:52 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 20:04:16 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 20:04:16 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 20:04:16 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 20:04:16 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 20:04:34 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 20:04:34 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 20:04:34 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 20:04:34 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 23:05:35 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 23:05:35 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 23:05:35 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[15-Nov-2015 23:05:35 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 00:32:45 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 00:32:45 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 00:32:45 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 00:32:45 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 00:33:02 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 00:33:02 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 00:33:02 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 00:33:02 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:05:03 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:05:03 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:05:03 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:05:03 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:05:23 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:05:23 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:05:23 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:05:23 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:14:33 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:14:33 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:14:33 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:14:33 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:14:51 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:14:51 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:14:51 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:14:51 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:49:56 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:49:56 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:49:56 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:49:56 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:50:22 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:50:22 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:50:22 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 10:50:22 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:46:48 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:46:48 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:46:48 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:46:48 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:47:45 America/Los_Angeles] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/anu888/public_html/includes/classes/database.php on line 68
+[16-Nov-2015 15:47:45 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:47:45 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:47:45 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:47:45 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:47:45 America/Los_Angeles] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/anu888/public_html/includes/docleftsidebar.php on line 13
+[16-Nov-2015 15:47:45 America/Los_Angeles] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/anu888/public_html/includes/docleftsidebar.php on line 17
+[16-Nov-2015 15:48:19 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:19 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:19 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:19 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:21 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:21 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:21 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:21 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:21 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:21 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:21 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:21 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:22 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:22 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:22 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:22 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:22 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:22 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:22 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:22 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:50 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:50 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:50 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:48:50 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:50:30 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:50:30 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:50:30 America/Los_Angeles] PHP Notice:  Undefined variable: fetch in /home/anu888/public_html/includes/docheader.php on line 75
+[16-Nov-2015 15:50:30 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in /home/anu888/public_html/includes/docheader.php on line 75

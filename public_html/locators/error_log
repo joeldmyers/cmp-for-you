@@ -1,0 +1,14 @@
+[17-Jul-2015 06:02:45 America/Chicago] PHP Warning:  require_once(includes/doc_authentication.php): failed to open stream: No such file or directory in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 6
+[17-Jul-2015 06:02:45 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'includes/doc_authentication.php' (include_path='.:/opt/php54/lib/php') in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 6
+[17-Jul-2015 06:03:12 America/Chicago] PHP Warning:  require_once(/includes/doc_authentication.php): failed to open stream: No such file or directory in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 6
+[17-Jul-2015 06:03:12 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/includes/doc_authentication.php' (include_path='.:/opt/php54/lib/php') in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 6
+[17-Jul-2015 06:03:14 America/Chicago] PHP Warning:  require_once(/includes/doc_authentication.php): failed to open stream: No such file or directory in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 6
+[17-Jul-2015 06:03:14 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/includes/doc_authentication.php' (include_path='.:/opt/php54/lib/php') in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 6
+[17-Jul-2015 06:03:25 America/Chicago] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/sanjeevu/public_html/cmforyou/includes/doc_authentication.php on line 6
+[17-Jul-2015 06:03:25 America/Chicago] PHP Fatal error:  Call to undefined function redirect() in /home2/sanjeevu/public_html/cmforyou/includes/doc_authentication.php on line 7
+[17-Jul-2015 16:45:58 Asia/Calcutta] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 12
+[17-Jul-2015 16:45:58 Asia/Calcutta] PHP Warning:  mysql_query(): A link to the server could not be established in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 12
+[17-Jul-2015 18:49:17 Asia/Calcutta] PHP Fatal error:  Call to a member function Execute() on a non-object in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 9
+[17-Jul-2015 18:50:53 Asia/Calcutta] PHP Fatal error:  Call to a member function Execute() on a non-object in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 9
+[17-Jul-2015 08:24:20 America/Chicago] PHP Warning:  require_once(includes/top.php): failed to open stream: No such file or directory in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 7
+[17-Jul-2015 08:24:20 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'includes/top.php' (include_path='.:/opt/php54/lib/php') in /home2/sanjeevu/public_html/cmforyou/locators/map.php on line 7

@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^community\.cmpforyou\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.community\.cmpforyou\.com$
+RewriteRule ^/?$ "http\:\/\/cmp\.vanillacommunity\.com" [R=301,L]
+

@@ -1,0 +1,551 @@
+<?php
+
+require_once("includes/top.php");
+
+require_once("includes/doc_authentication.php");
+
+?>
+
+<?php require_once("includes/docheader.php"); ?> 
+
+<?php require_once("includes/docleftsidebar.php"); ?> 
+
+    <script src="<?=$remotelocation;?>includes/js/jquery.js"></script>
+
+    <script src="<?=$remotelocation;?>includes/js/jquery.themepunch.plugins.min.js"></script>			
+
+    <script src="<?=$remotelocation;?>includes/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="<?=$remotelocation;?>includes/js/medical.min.js"></script>	
+
+    <script src="<?=$remotelocation;?>includes/js/jquery.validate.min.js"></script>
+
+    <script src="<?=$remotelocation;?>includes/js/bootstrap.min.js"></script>    
+
+    <div class="container">
+
+    <div class="col-md-9 col-xs-12">
+
+    <h2 class="pad_btm20 pad_top10 pad_left10">Profile Steps</h2>
+
+    <div class="searchbar">  
+
+
+
+        <div class="docpanel-list">
+
+    <style type="text/css">
+
+        #accountForm {
+
+            margin-top: 15px;
+
+        }
+
+    </style>
+
+    <div  class="tabs-new margin-top-40">
+
+        <ul class="nav-new nav-tabs-new">
+
+            <li><a href="<?=$remotelocation."doctorprofile_steps.php";?>" style="cursor:pointer;" >Address</a></li>
+
+            <li><a href="<?=$remotelocation."doctorpersonal_detailtab.php";?>" style="cursor:pointer;">Personal Information </a></li>
+
+            <li class="active"><a href="<?=$remotelocation."doctorspeciality_tab.php";?>" style="cursor:pointer;" >Speciality </a></li>  
+                              
+
+        </ul>
+
+    </div>
+
+      <?php 
+
+    $message = '';
+ $speciality_list = $db->Execute("select", "select  * FROM " . SPECIALITY );
+    $email = $_SESSION["emp_email"];
+
+    if(isset($_POST['action']) && !empty($_POST['action']) && $_POST['action'] == '_specialitytab'){
+
+        $primary_speciality = trim($_POST['primary_speciality']);
+
+        $secondary_speciality_1 = trim($_POST['secondary_speciality_1']);
+
+        $secondary_speciality_2 = trim($_POST['secondary_speciality_2']);
+
+        $secondary_speciality_3 = trim($_POST['secondary_speciality_3']);
+
+        $secondary_speciality_4 = trim($_POST['secondary_speciality_4']);
+        $about_doctor=trim($_POST['about_doctor']);
+        $video_consultation_fee=trim($_POST['video_consult_fee']);
+        $person_consultation_fee=trim($_POST['person_consult_fee']);
+		$concierge_service=trim($_POST['concierge_service']);
+        $organization_legal_name = trim($_POST['organization_legal_name']);
+
+        $organization_dba_name = trim($_POST['organization_dba_name']);
+
+        $updateSpeciality = $db->Execute("update", "update " . MEDIC . "  SET   primary_speciality='" . trim(mysql_real_escape_string($primary_speciality)) . "',secondary_speciality_1='" . trim(mysql_real_escape_string($secondary_speciality_1)) . "',secondary_speciality_2 ='" . trim(mysql_real_escape_string($secondary_speciality_2)) . "',secondary_speciality_3 ='" . trim(mysql_real_escape_string($secondary_speciality_3)) . "',secondary_speciality_4 ='" . trim(mysql_real_escape_string($secondary_speciality_4)) . "',about_doctor ='" . trim(mysql_real_escape_string($about_doctor)) . "',person_consult_fee ='" . trim(mysql_real_escape_string($person_consultation_fee)) . "',video_consult_fee ='" . trim(mysql_real_escape_string($video_consultation_fee)) . "',organization_legal_name ='" . trim(mysql_real_escape_string($organization_legal_name)) . "',organization_dba_name ='" . trim(mysql_real_escape_string($organization_dba_name)) . "' ,concierge ='" . trim(mysql_real_escape_string($concierge_service)) . "' where `email`='" . $email . "'");
+
+        echo"<script>window.location.href='doctordashboard.php'</script>";
+
+    }else{
+
+        $userdata = $db->Execute("select", "select  primary_speciality,secondary_speciality_1,secondary_speciality_2,secondary_speciality_3,secondary_speciality_4,all_secondary_speciality,organization_legal_name,organization_dba_name,about_doctor,video_consult_fee,person_consult_fee,concierge FROM " . MEDIC . " where email ='".$email."'");
+
+       }
+//echo "<pre>";print_r($userdata);exit;
+    
+
+    ?>
+
+
+
+<form id="accountForm" method="post" class="form-horizontal" action="<?php $_SERVER['PHP_SELF']; ?>">
+
+        <input type="hidden" name="action" value="_specialitytab">
+
+        <div class="tab-content-new">
+
+         <div class="tab-pane1" id="others-tab">
+
+             <div class="form-group">
+
+                    <label class="col-xs-3 control-label">Primary Speciality</label>
+
+                    <div class="col-xs-8">
+
+                        <select class="form-control" name="primary_speciality" id="primary_speciality" >
+
+                            
+ <option value="" selected="selected" >SELECT SPECIALITY</option>
+                            <?php
+
+                            if (isset($speciality_list) && !empty($speciality_list)) {
+
+                                foreach ($speciality_list as $data) {
+
+                                    if(isset($userdata[0]['primary_speciality']) && $data['speciality']== $userdata[0]['primary_speciality']){
+
+                                        echo '<option value="'.$data['speciality'].'" selected="selected" >'.$data['speciality'].'</option>';
+
+
+                                    }else{
+
+                                        echo '<option value="'.$data['speciality'].'">'.$data['speciality'].'</option>';
+
+                                    } 
+
+                                }
+
+                            }
+
+                            ?>
+
+                        </select>
+                        <!--<textarea class="form-control" name="primary_speciality" rows="3" coloumn="3" id="primary_speciality"><?=(isset($userdata[0]['primary_speciality']) && !empty($userdata[0]['primary_speciality'])? $userdata[0]['primary_speciality'] : '');?></textarea>-->
+
+                    </div>
+
+                </div>
+
+             <div class="form-group">
+
+                    <label class="col-xs-3 control-label">Secondary Speciality 1</label>
+
+                    <div class="col-xs-8">
+<select class="form-control" name="secondary_speciality_1" id="secondary_speciality_1" >
+
+                      <option value="" selected="selected" >SELECT SPECIALITY</option>      
+
+                            <?php
+
+                            if (isset($speciality_list) && !empty($speciality_list)) {
+
+                                foreach ($speciality_list as $data) {
+
+                                    if(isset($userdata[0]['secondary_speciality_1']) && $data['speciality']== $userdata[0]['secondary_speciality_1']){
+
+                                        echo '<option value="'.$data['speciality'].'" selected="selected" >'.$data['speciality'].'</option>';
+
+
+                                    }else{
+
+                                        echo '<option value="'.$data['speciality'].'">'.$data['speciality'].'</option>';
+
+                                    } 
+
+                                }
+
+                            }
+
+                            ?>
+
+                        </select>
+                        <!--<textarea class="form-control" name="secondary_speciality_1" rows="3" coloumn="3" id="secondary_speciality_1"><?=(isset($userdata[0]['secondary_speciality_1']) && !empty($userdata[0]['secondary_speciality_1'])? $userdata[0]['secondary_speciality_1'] : '');?></textarea>-->
+
+                    </div>
+
+                </div>
+
+             <div class="form-group">
+
+                    <label class="col-xs-3 control-label">Secondary Speciality 2</label>
+
+                    <div class="col-xs-8">
+<select class="form-control" name="secondary_speciality_2" id="secondary_speciality_2" >
+<option value="" selected="selected" >SELECT SPECIALITY</option>
+                            
+
+                            <?php
+
+                            if (isset($speciality_list) && !empty($speciality_list)) {
+
+                                foreach ($speciality_list as $data) {
+
+                                    if(isset($userdata[0]['secondary_speciality_2']) && $data['speciality']== $userdata[0]['secondary_speciality_2']){
+
+                                        echo '<option value="'.$data['speciality'].'" selected="selected" >'.$data['speciality'].'</option>';
+
+
+                                    }else{
+
+                                        echo '<option value="'.$data['speciality'].'">'.$data['speciality'].'</option>';
+
+                                    } 
+
+                                }
+
+                            }
+
+                            ?>
+
+                        </select>
+                        <!--<textarea class="form-control" name="secondary_speciality_2" rows="3" coloumn="3" id="secondary_speciality_2"><?=(isset($userdata[0]['secondary_speciality_2']) && !empty($userdata[0]['secondary_speciality_2'])? $userdata[0]['secondary_speciality_2'] : '');?></textarea>-->
+
+                    </div>
+
+                </div>
+
+             <div class="form-group">
+
+                    <label class="col-xs-3 control-label">Secondary Speciality 3</label>
+
+                    <div class="col-xs-8">
+<select class="form-control" name="secondary_speciality_3" id="secondary_speciality_3" >
+
+                       <option value="" selected="selected" >SELECT SPECIALITY</option>     
+
+                            <?php
+
+                            if (isset($speciality_list) && !empty($speciality_list)) {
+
+                                foreach ($speciality_list as $data) {
+
+                                    if(isset($userdata[0]['secondary_speciality_3']) && $data['speciality']== $userdata[0]['secondary_speciality_3']){
+
+                                        echo '<option value="'.$data['speciality'].'" selected="selected" >'.$data['speciality'].'</option>';
+
+
+                                    }else{
+
+                                        echo '<option value="'.$data['speciality'].'">'.$data['speciality'].'</option>';
+
+                                    } 
+
+                                }
+
+                            }
+
+                            ?>
+
+                        </select>
+                        <!--<textarea class="form-control" name="secondary_speciality_3" rows="3" coloumn="3" id="secondary_speciality_3"><?=(isset($userdata[0]['secondary_speciality_3']) && !empty($userdata[0]['secondary_speciality_3'])? $userdata[0]['secondary_speciality_3'] : '');?></textarea>-->
+
+                    </div>
+
+                </div>
+
+             <div class="form-group">
+
+                    <label class="col-xs-3 control-label">Secondary Speciality 4</label>
+
+                    <div class="col-xs-8">
+<select class="form-control" name="secondary_speciality_4" id="secondary_speciality_4" >
+
+                         <option value="" selected="selected" >SELECT SPECIALITY</option>   
+
+                            <?php
+
+                            if (isset($speciality_list) && !empty($speciality_list)) {
+
+                                foreach ($speciality_list as $data) {
+
+                                    if(isset($userdata[0]['secondary_speciality_4']) && $data['speciality']== $userdata[0]['secondary_speciality_4']){
+
+                                        echo '<option value="'.$data['speciality'].'" selected="selected" >'.$data['speciality'].'</option>';
+
+
+                                    }else{
+
+                                        echo '<option value="'.$data['speciality'].'">'.$data['speciality'].'</option>';
+
+                                    } 
+
+                                }
+
+                            }
+
+                            ?>
+
+                        </select>
+                        <!--<textarea class="form-control" name="secondary_speciality_4" rows="3" coloumn="3" id="secondary_speciality_4"><?=(isset($userdata[0]['secondary_speciality_4']) && !empty($userdata[0]['secondary_speciality_4'])? $userdata[0]['secondary_speciality_4'] : '');?></textarea>-->
+
+                    </div>
+
+                </div>
+
+<!--             <div class="form-group">
+
+                    <label class="col-xs-3 control-label">All Secondary Speciality</label>
+
+                    <div class="col-xs-8">
+<select class="form-control" name="all_secondary_speciality" id="all_secondary_speciality" >
+
+                         <option value="" selected="selected" >SELECT SPECIALITY</option>   
+
+                            <?php
+
+                            if (isset($speciality_list) && !empty($speciality_list)) {
+
+                                foreach ($speciality_list as $data) {
+
+                                    if(isset($userdata[0]['all_secondary_speciality']) && $data['speciality']== $userdata[0]['all_secondary_speciality']){
+
+                                        echo '<option value="'.$data['speciality'].'" selected="selected" >'.$data['speciality'].'</option>';
+
+
+                                    }else{
+
+                                        echo '<option value="'.$data['speciality'].'">'.$data['speciality'].'</option>';
+
+                                    } 
+
+                                }
+
+                            }
+
+                            ?>
+
+                        </select>
+                        <textarea class="form-control" name="all_secondary_speciality" rows="3" coloumn="3" id="all_secondary_speciality"><?=(isset($userdata[0]['all_secondary_speciality']) && !empty($userdata[0]['all_secondary_speciality'])? $userdata[0]['all_secondary_speciality'] : '');?></textarea>
+
+                    </div>
+
+                </div>-->
+<div class="form-group">
+
+                    <label class="col-xs-3 control-label">Tell Us About Yourself</label>
+
+                    <div class="col-xs-8">
+
+                        <textarea id="about_doctor" coloumn="3" rows="3" name="about_doctor" class="form-control"><?=(isset($userdata[0]['video_consult_fee']) && !empty($userdata[0]['about_doctor']) ? $userdata[0]['about_doctor'] : '');?></textarea>
+
+                    </div>
+
+                </div>
+                <div class="form-group">
+
+                    <label class="col-xs-3 control-label">How Much Will You Charge For Video Consultation</label>
+
+                    <div class="col-xs-8">
+                    <select class="form-control" name="video_consult_fee" id="video_consult_fee">
+                     <?php
+                      $packages = array('40' => '$40' , '60' => '$60' , '120' => '$120');
+                      foreach($packages as $k => $v):
+                      
+                      if(isset($userdata[0]['video_consult_fee']) && $k == $userdata[0]['video_consult_fee'])
+                      {
+                        echo  "<option value='".$k."' selected='selected'>".$v."</option>";
+                      }else{
+                      
+                        echo  "<option value='".$k."'>".$v."</option>";
+                      }
+                      endforeach;
+                      
+                    ?>
+
+                    
+                    </select>
+<!--
+                        <input type="text" class="form-control" name="video_consult_fee" id="organization_legal_name" value="<?=(isset($userdata[0]['video_consult_fee']) && !empty($userdata[0]['video_consult_fee']) ? $userdata[0]['video_consult_fee'] : '');?>"/>
+-->
+                    </div>
+
+                </div>
+                <div class="form-group">
+
+                    <label class="col-xs-3 control-label">How Much will You Charge For In Office Consultation</label>
+
+                    <div class="col-xs-8">
+                    <select class="form-control" name="person_consult_fee" id="person_consult_fee">
+                     <?php
+                      $packages = array('100' => '$100' , '150' => '$150' , '300' => '$300');
+                      foreach($packages as $k => $v):
+                      
+                      if(isset($userdata[0]['person_consult_fee']) && $k == $userdata[0]['person_consult_fee'])
+                      {
+                        echo  "<option value='".$k."' selected='selected'>".$v."</option>";
+                      }else{
+                      
+                        echo  "<option value='".$k."'>".$v."</option>";
+                      }
+                      endforeach;
+                      
+                    ?>
+
+                    
+                    </select>
+<!--
+                        <input type="text" class="form-control" name="person_consult_fee" id="organization_legal_name" value="<?=(isset($userdata[0]['person_consult_fee']) && !empty($userdata[0]['person_consult_fee']) ? $userdata[0]['person_consult_fee'] : '');?>"/>
+-->
+                    </div>
+
+                </div>
+                
+                <div class="form-group">
+
+                    <label class="col-xs-3 control-label">How Much will You Charge For Deluxe Concierge Service</label>
+
+                    <div class="col-xs-8">
+                    <select class="form-control" name="concierge_service" id="concierge_service">
+                     <?php
+					 echo $userdata[0]['concierge'];
+                      $packages = array('175' => '$175' , '250' => '$250' , '350' => '$350');
+                      foreach($packages as $k => $v):
+                      
+                      if(isset($userdata[0]['concierge']) && $k == $userdata[0]['concierge'])
+                      {
+                        echo  "<option value='".$k."' selected='selected'>".$v."</option>";
+                      }else{
+                      
+                        echo  "<option value='".$k."'>".$v."</option>";
+                      }
+                      endforeach;
+                      
+                    ?>
+
+                    
+                    </select>
+
+                    </div>
+
+                </div>
+                
+                
+             <div class="form-group">
+
+                    <label class="col-xs-3 control-label">Organisation Legal Name</label>
+
+                    <div class="col-xs-8">
+
+                        <input type="text" class="form-control" name="organization_legal_name" id="organization_legal_name" value="<?=(isset($userdata[0]['organization_legal_name']) && !empty($userdata[0]['organization_legal_name']) ? $userdata[0]['organization_legal_name'] : '');?>"/>
+
+                    </div>
+
+                </div>
+
+             <div class="form-group">
+
+                    <label class="col-xs-3 control-label">Organisation DBA Name</label>
+
+                    <div class="col-xs-8">
+
+                        <input type="text" class="form-control" name="organization_dba_name" id="organization_dba_name" value="<?=(isset($userdata[0]['organization_dba_name']) && !empty($userdata[0]['organization_dba_name']) ? $userdata[0]['organization_dba_name'] : '');?>"/>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+
+                    <div class="col-xs-5 col-xs-offset-3">
+
+                        <a href="doctorpersonal_detailtab.php"><button  class="btn btn-primary btn-back" name="submit" type="button" id="btn-back" >Back</button></a>
+
+                        <!--<a href="doctorpersonal_detailtab.php" data-toggle="tab"><button  class="btn btn-primary btn-back1" name="submit" type="submit" id="btn-back" >Back</button></a>-->
+
+                        <button  class="btn btn-primary" name="submit" type="submit" id="submit" style="margin-left:10px;" onclick="return validatedoctorspecialitysteps()">Submit</button></a>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            </div>
+
+</form>
+
+    </div>
+
+    </div>
+
+    </div>
+
+        </div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#hourlyfees").keydown(function (e) {
+
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+
+                    (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+
+                    (e.keyCode >= 35 && e.keyCode <= 40)) {
+
+                return;
+
+            }
+
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+
+                e.preventDefault();
+
+            }
+
+        })
+
+         });
+
+</script>
+
+<script>
+
+    function validatedoctorspecialitysteps(){
+
+        var primary = $('#primary_speciality').val();
+
+        var organization = $('#organization_legal_name').val();
+
+        if(primary == ''){
+
+            alert("Please enter primary speciality");
+
+            return false;
+
+        }else if(organization == ''){
+
+            alert("Please enter organisation legal name");
+
+            return false;
+
+        }
+
+    }
+
+</script>

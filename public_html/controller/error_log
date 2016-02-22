@@ -1,0 +1,4 @@
+[20-May-2015 08:46:01 Etc/GMT] PHP Warning:  include_once(class/default.tpl.php): failed to open stream: No such file or directory in /home/pmslta1f/public_html/demopmsl.com/medical/controller/main.php on line 7
+[20-May-2015 08:46:01 Etc/GMT] PHP Warning:  include_once(): Failed opening 'class/default.tpl.php' for inclusion (include_path='.:/usr/local/altphp54/lib/php') in /home/pmslta1f/public_html/demopmsl.com/medical/controller/main.php on line 7
+[20-May-2015 08:46:12 Etc/GMT] PHP Warning:  include_once(class/default.tpl.php): failed to open stream: No such file or directory in /home/pmslta1f/public_html/demopmsl.com/medical/controller/main.php on line 7
+[20-May-2015 08:46:12 Etc/GMT] PHP Warning:  include_once(): Failed opening 'class/default.tpl.php' for inclusion (include_path='.:/usr/local/altphp54/lib/php') in /home/pmslta1f/public_html/demopmsl.com/medical/controller/main.php on line 7

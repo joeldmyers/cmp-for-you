@@ -1,0 +1,101 @@
+<?php
+require_once("../includes/top.php");
+$id=$_GET['id'];
+$data=$db->Execute("select", "SELECT *,concat(coalesce(first_name,''),' ',coalesce(middle_name,''),' ',coalesce(last_name,'')) as name,concat(coalesce(street_address_line1,''),' ',coalesce(street_address_line2,'')) as address,city,doctor_state FROM `medic1` where doctor_id=".$id );
+if(empty($data)){
+    echo "Sorry!! we are unable to fetch the information.";
+}
+$name=$data[0]['name'];
+$address=$data[0]['address'];
+
+$city=$data[0]['city'];
+$state=$data[0]['doctor_state'];
+$zipcode=$data[0]['zipcode'];
+ if (isset($data[0]['gender']) && $data[0]['gender'] == 'M') {
+	$img=$remotelocation . "includes/images/profilepic3.png";
+ } else {
+	$img=$remotelocation . "includes/images/profilepic2.png";
+ }
+?>
+<html>
+<head>
+<link href="https://cmpforyou.com/includes/css/font-awesome.min.css" rel="stylesheet">
+      <link href="https://cmpforyou.com/includes/css/bootstrap.min.css" rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+  	<div class="col-md-6">
+    
+      <div class="panel panel-default">
+			<div class="panel-body">
+              		<div class="row">
+                        <div class="col-xs-12 col-sm-8">
+                            <h2><?php echo $name; ?></h2>
+                            <p><strong>Address: </strong><?php echo $address; ?></p>
+                            <p><strong>Address2: </strong><?php echo $state; ?>,<?php echo $city; ?>,<?php echo $zipcode; ?></p>
+                           <p><strong>Medical School: </strong><?php echo $data[0]['medical_school']; ?></p>
+							<p><strong>Graduation Year: </strong><?php echo $data[0]['graduation_year']; ?></p>
+							<p><strong>Organization Name: </strong><?php echo $data[0]['organization_legal_name']; ?></p>
+						   <p><strong>Speciality: </strong>
+								<?php
+									if($data[0]['primary_speciality']){
+								?>
+                                <span class="label label-info tags"><?php echo $data[0]['primary_speciality']; ?></span>
+								<?php
+								}
+								?>
+                                <?php
+									if($data[0]['secondary_speciality_1']){
+								?>
+                                <span class="label label-info tags"><?php echo $data[0]['secondary_speciality_1']; ?></span>
+								<?php
+								}
+								?>
+								<?php
+									if($data[0]['secondary_speciality_2']){
+								?>
+                                <span class="label label-info tags"><?php echo $data[0]['secondary_speciality_2']; ?></span>
+								<?php
+								}
+								?>
+								<?php
+									if($data[0]['all_secondary_speciality']){
+								?>
+                                <span class="label label-info tags"><?php echo $data[0]['all_secondary_speciality']; ?></span>
+								<?php
+								}
+								?>
+                            </p>
+                        </div><!--/col-->          
+                        <div class="col-xs-12 col-sm-4 text-center">
+                                <img src="<?php echo $img; ?>" alt="" class="center-block img-circle img-responsive">
+                                <ul class="list-inline ratings text-center" title="Ratings">
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                </ul>
+						<!--<p><strong>NPI: </strong><?php echo $data[0]['npi']; ?></p>
+						<p><strong>PAC ID: </strong><?php echo $data[0]['pac_id']; ?></p>
+						<p><strong>Professional ID: </strong><?php echo $data[0]['professional_enroll_id']; ?></p>
+						<p><strong>Credential: </strong><?php echo $data[0]['credential']; ?></p>-->						
+                        </div><!--/col-->
+
+                       
+              		</div><!--/row-->
+              </div><!--/panel-body-->
+          </div><!--/panel-->
+
+    
+    
+    </div>
+<script>
+	function close_box(){
+		 $('#fancybox-close').trigger('click');
+	}
+</script>
+</body>
+</html>
